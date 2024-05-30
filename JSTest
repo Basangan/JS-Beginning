@@ -1,0 +1,51 @@
+/* 
+// Metacrafters - Beginning Javascript
+//
+// This is a javascript playground for testing your javascript code!
+// When you are ready to test, simply right click and select "Run Code"
+// to see the result print below. If you have more then one snippet of code,
+// you can highlight the code you want to test, and then right click and select "Run Code"
+ */ // Enter your code below this line //
+
+const NFTs = []
+
+// MINT NFT //
+function mintNFT (_name, _shoeType, _shirtType, _animefav) {
+    const NFT = {
+        "name":_name,
+        "shoeType":_shoeType,
+        "shirtType":_shirtType,
+        "animefav":_animefav
+
+    }
+    NFTs.push(NFT);
+    console.log("Minted:" + _name);
+}
+
+// LIST NFT //
+
+function listNFTs () {
+ for(let i = 0; i < NFTs.length; i++) {
+    console.log("\nID: \t\t\t\t" + (i + 1));
+    console.log("Name: \t\t\t" + NFTs[i].name);
+    console.log("Shoe Type: \t" + NFTs[i].shoeType);
+    console.log("Shirt Type: " + NFTs[i].shirtType);
+    console.log("Animefav: \t" + NFTs[i].animefav);
+ }
+}
+
+// hehehe //
+
+function getTotalSupply() {
+ console.log("\n" + NFTs.length);   
+}
+
+
+// call your function below this line //
+mintNFT("troy", "sneakers", "oversized", "OnePiece");
+mintNFT("ced", "sneakers", "oversized", "MyHeroAcademian");
+mintNFT("jan", "sneakers", "oversized", "YourName");
+mintNFT("james", "sneakers", "oversized", "YozakuraFamily");
+mintNFT("roel", "sneakers", "oversized", "Adidas");
+listNFTs();
+getTotalSupply();
